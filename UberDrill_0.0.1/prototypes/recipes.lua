@@ -42,9 +42,11 @@ data:extend({
 	{
 		type = "recipe",
 		name = "drill-producing-recipe",
+		hide_from_player_crafting = true,
 		energy_required = 1,
-		category = "crafting",
+		category = "drill-crafting-category",
 		ingredients = {
+			{name="fluoroantimonic-acid",amount=25,type="fluid"}
 		},
 		results =
 		{{
