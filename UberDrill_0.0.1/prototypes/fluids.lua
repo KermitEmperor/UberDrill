@@ -11,11 +11,9 @@ data:extend({
     icon_size = 64,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-    order = "a[fluid]-b[fluoroantimonic-acid]"
-  }
-})
-
-data:extend({
+    order = "a[fluid]-b[fluoroantimonic-acid]",
+    auto_barrel = true
+  },
   {
     type = "fluid",
     name = "hydrofluoric-acid",
@@ -29,11 +27,9 @@ data:extend({
     icon_size = 64,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-    order = "a[fluid]-b[fluoroantimonic-acid]"
-  }
-})
-
-data:extend({
+    order = "a[fluid]-b[hydrofluoric-acid]",
+    auto_barrel = true
+  },
   {
     type = "fluid",
     name = "fluorine-gas",
@@ -42,11 +38,12 @@ data:extend({
     base_color = {r = 0.89, g = 0.878, b = 0.243},
     flow_color = {r = 0.89, g = 0.878, b = 0.243},
     max_temperature = 100,
-    min_temparature = -219.6,
+    gas_temperature = 20,
     icon = "__UberDrill__/graphics/icons/fluorine-gas.png",
     icon_size = 64,
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-    order = "a[fluid]-b[fluoroantimonic-acid]"
+    order = "a[fluid]-b[fluorine-gas]",
+    auto_barrel = true
   }
 })

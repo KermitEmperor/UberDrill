@@ -7,5 +7,13 @@ data:extend({
       group = "intermediate-products",
       order = "g[purple-circuit]",
       stack_size = 100
+    },
+    {
+      type = "item",
+      name = "antimony-ore",
+      icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+      icon_size = 64, icon_mipmaps = 4,
+      group = "intermediate-products",
+      stack_size = 50
     }
 })
