@@ -35,19 +35,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{position = { 0, -1.6 }, type = "input", max_underground_distance = 1}},
+        pipe_connections = {{position = { 0, -5 }, type = "input", max_underground_distance = 1}},
         secondary_draw_orders = { north = -1 }
-      },
-      {
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{type = "output", position = {0, 2}}},
-        secondary_draw_orders = { north = -1 }
-      },
-      off_when_no_fluid_recipe = true
+      }
     },
     energy_usage = "180kW",
     crafting_speed = 1,
@@ -62,7 +52,7 @@ data:extend({
       emissions_per_minute = 10,
       drain = "20kW"
     },
-    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+    collision_box = {{-4.3, -4.3}, {4.3, 4.3}},
+    selection_box = {{-4.5, -4.5}, {4.5, 4.5}}
   }
 })
