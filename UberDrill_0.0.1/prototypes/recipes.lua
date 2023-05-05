@@ -38,5 +38,18 @@ data:extend({
 			probability = 0.900,
 			amount = 10
 		  }}
+	},
+	{
+		type = "recipe",
+		name = "drill-producing-recipe",
+		energy_required = 12,
+		category = "crafting",
+		ingredients = {
+		},
+		results =
+		{{
+			name = "antimony-ore",
+			amount = 2
+		}}
 	}
 })
