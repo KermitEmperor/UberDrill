@@ -2,5 +2,12 @@
     "Lua.diagnostics.globals": [
         "data",
         "util"
+    ],
+    "factorio.versions": [
+        {
+            "name": "Factorio 1.1.80",
+            "factorioPath": "f:\\SteamLibrary\\steamapps\\common\\Factorio\\bin\\x64\\factorio.exe",
+            "active": true
+        }
     ]
 }

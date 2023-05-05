@@ -9,8 +9,6 @@ data:extend({
     max_health = 150,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     resistances = {
       {
         type = "fire",
@@ -64,5 +62,53 @@ data:extend({
       emissions_per_minute = 10,
       drain = "20kW"
     },
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    animation = {
+  layers = {
+    {
+      filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
+      priority = "high",
+      width = 113,
+      height = 99,
+      frame_count = 32,
+      line_length = 8,
+      shift = {0.4, -0.06},
+      scale = 1,
+      hr_version = {
+        filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3.png",
+        priority = "high",
+        width = 226,
+        height = 196,
+        frame_count = 32,
+        line_length = 8,
+        shift = util.by_pixel(0, -3),
+        scale = 0.5
+      }
+    },
+    {
+      filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
+      priority = "high",
+      width = 113,
+      height = 91,
+      frame_count = 32,
+      line_length = 8,
+      draw_as_shadow = true,
+      shift = {0.4, 0.12},
+      scale = 1,
+      hr_version = {
+        filename = "__base__/graphics/entity/assembling-machine-3/hr-assembling-machine-3-shadow.png",
+        priority = "high",
+        width = 226,
+        height = 182,
+        frame_count = 32,
+        line_length = 8,
+        draw_as_shadow = true,
+        shift = util.by_pixel(11, 2),
+        scale = 0.5
+      }
+    }
+  }
+},
   }
 })

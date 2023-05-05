@@ -42,7 +42,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "drill-producing-recipe",
-		energy_required = 12,
+		energy_required = 1,
 		category = "crafting",
 		ingredients = {
 		},
