@@ -35,7 +35,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{position = { 0, -1.6 }, type = "output", max_underground_distance = 1}},
+        pipe_connections = {{position = { 0, -1.6 }, type = "input", max_underground_distance = 1}},
         secondary_draw_orders = { north = -1 }
       },
       {
