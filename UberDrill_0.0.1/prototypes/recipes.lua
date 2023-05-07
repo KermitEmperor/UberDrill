@@ -1,3 +1,25 @@
+if mods["space-exploration"] then
+	data:extend({
+		{
+			type = "recipe",
+			name = "se-drill-producing-recipe",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "antimony-ore", amount = 2 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		}
+	})
+end
+
 data:extend({
 	{
 		type = "recipe",
@@ -45,13 +67,28 @@ data:extend({
 		hide_from_player_crafting = true,
 		energy_required = 1,
 		category = "drill-crafting-category",
+		icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+		subgroup = "raw-material",
+		icon_size = 64, icon_mipmaps = 4,
 		ingredients = {
 			{name="fluoroantimonic-acid",amount=25,type="fluid"}
 		},
-		results =
-		{{
-			name = "antimony-ore",
-			amount = 2
-		}}
-	}
+		results = {
+			{name = "antimony-ore", amount = 2 }
+		}
+	},
+	{
+		type = "recipe",
+		enabled = true,
+		energy_required = 15,
+		name = "purple-circuit",
+		category = "crafting",
+		group = "production",
+		subgroup = "extraction-machine",
+		order = "b[electric-mining-drill]",
+		ingredients = {
+			{"purple-circuit",2},
+		},
+		result = "drill"
+	},
 })
