@@ -2,7 +2,24 @@ if mods["space-exploration"] then
 	data:extend({
 		{
 			type = "recipe",
-			name = "se-drill-producing-recipe",
+			name = "se-drill-nauvis",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-cold", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-omni", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-crude-oil",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
 			energy_required = 1,
@@ -13,10 +30,180 @@ if mods["space-exploration"] then
 				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
 			},
 			results = {
-				{name = "antimony-ore", amount = 2 },
+				{name = "se-core-fragment-crude-oil", amount = 50 },
 				{name="se-space-coolant-hot", amount=10, type="fluid"}
 			}
-		}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-stone",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-cold", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-stone", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-iron-ore",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-cold", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-iron-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-copper-ore",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-cold", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-copper-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-uranium-ore",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-uranium-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-vulcanite",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-vulcanite", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-cryonite",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-warm", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-cryonite", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-beryllium",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-beryllium-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-holmium",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-holmium-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-iridium",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-iridium-ore", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
+		{
+			type = "recipe",
+			name = "se-drill-se-vitamelange",
+			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
+			icon_size = 64, icon_mipmaps = 4,
+			energy_required = 1,
+			category = "drill-crafting-category",
+			subgroup = "raw-material",
+			ingredients = {
+				{name="fluoroantimonic-acid",amount=25,type="fluid"},
+				{name="se-space-coolant-supercooled", amount=10, type="fluid"}
+			},
+			results = {
+				{name = "se-core-fragment-se-vitamelange", amount = 50 },
+				{name="se-space-coolant-hot", amount=10, type="fluid"}
+			}
+		},
 	})
 end
 

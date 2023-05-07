@@ -9,8 +9,10 @@ script.on_event(defines.events.on_built_entity, function(event)
 
             game.print(planet.primary_resource)
 
-            if planet.primary_resource == "stone" then
-               entity.set_recipe("se-drill-producing-recipe")
+            if capitalzed_surface_name == "Nauvis" then
+                entity.set_recipe("se-drill-nauvis")
+            else
+                entity.set_recipe("se-drill-" .. planet.primary_resource)
             end
         else 
             entity.set_recipe("drill-producing-recipe")
