@@ -2,8 +2,8 @@ data:extend({
   {
     type = "assembling-machine",
     name = "drill",
-    icon = "__base__/graphics/icons/assembling-machine-1.png",
-    icon_size = 32,
+    icon = "__UberDrill__/graphics/icons/drill.png",
+    icon_size = 1105,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "drill"},
     max_health = 150,
@@ -14,15 +14,6 @@ data:extend({
         type = "fire",
         percent = 70
       }
-    },
-    working_sound =
-    {
-      sound =
-      {
-        filename = "__base__/sound/electric-mining-drill.ogg",
-        volume = 0.75
-      },
-      apparent_volume = 1.5,
     },
     module_specification =
     {
@@ -35,7 +26,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{position = { 0, -5 }, type = "input", max_underground_distance = 1}},
+        pipe_connections = {{position = { 0, -7 }, type = "input"}},
         secondary_draw_orders = { north = -1 }
       },
       {
@@ -44,7 +35,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{position = { 1, -5 }, type = "input", max_underground_distance = 1}},
+        pipe_connections = {{position = { 1, -7 }, type = "input"}},
         secondary_draw_orders = { north = -1 }
       },
       {
@@ -53,9 +44,40 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{position = { -1, -5 }, type = "output", max_underground_distance = 1}},
+        pipe_connections = {{position = { -1, -7 }, type = "output"}},
         secondary_draw_orders = { north = -1 }
       }
+    },
+    animation = {
+      layers = {
+        {
+          filename = "__UberDrill__/graphics/icons/drill.png",
+          priority = "high",
+          width = 1105,
+          height = 1105,
+          frame_count = 1,
+          line_length = 1,
+          scale = 0.35,
+          hr_version = {
+            filename = "__UberDrill__/graphics/icons/drill.png",
+            priority = "high",
+            width = 1105,
+            height = 1105,
+            frame_count = 1,
+            line_length = 1,
+            scale = 0.35
+          }
+        }
+      }
+    },
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__UberDrill__/sound/drill_brrr.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
     },
     energy_usage = "180kW",
     crafting_speed = 1,
@@ -69,7 +91,7 @@ data:extend({
       emissions_per_minute = 10,
       drain = "20kW"
     },
-    collision_box = {{-4.3, -4.3}, {4.3, 4.3}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}}
+    collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
+    selection_box = {{-6.5, -6.5}, {6.5, 6.5}}
   }
 })

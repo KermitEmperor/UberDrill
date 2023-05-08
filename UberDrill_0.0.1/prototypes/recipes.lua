@@ -138,7 +138,7 @@ if mods["space-exploration"] then
 		},
 		{
 			type = "recipe",
-			name = "se-drill-se-beryllium",
+			name = "se-drill-se-beryllium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
 			energy_required = 1,
@@ -155,7 +155,7 @@ if mods["space-exploration"] then
 		},
 		{
 			type = "recipe",
-			name = "se-drill-se-holmium",
+			name = "se-drill-se-holmium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
 			energy_required = 1,
@@ -172,7 +172,7 @@ if mods["space-exploration"] then
 		},
 		{
 			type = "recipe",
-			name = "se-drill-se-iridium",
+			name = "se-drill-se-iridium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
 			energy_required = 1,

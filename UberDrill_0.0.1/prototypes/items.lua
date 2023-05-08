@@ -19,8 +19,8 @@ data:extend({
   {
     type = "item",
     name = "drill",
-    icon = "__UberDrill__/graphics/icons/antimony-copper.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__UberDrill__/graphics/icons/drill.png",
+    icon_size = 1105, icon_mipmaps = 1,
     group = "intermediate-products",
     place_result = "drill",
     stack_size = 5
