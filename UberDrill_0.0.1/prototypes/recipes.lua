@@ -231,12 +231,20 @@ if mods["space-exploration"] then
 			results = {
 				{name="se-space-coolant-hot", amount = 449, type = "fluid"} --the product cannot be seen for some f*cking reason
 			},
+			always_show_products = true,
 			enabled = true,
 			always_show_made_in = true,
 			order = "a-c",
 		}
 	})
 end
+
+local purpleCircuitSubgroup = "intermediate-product"
+
+if mods["space-exploration"] then
+	purpleCircuitSubgroup = "processor"
+end
+
 
 data:extend({
 	{
@@ -246,8 +254,8 @@ data:extend({
 		name = "purple-circuit",
 		category = "crafting-with-fluid",
 		group = "intermediate-products",
-		subgroup = "intermediate-product",
-		order = "g[purple-circuit]",
+		subgroup = purpleCircuitSubgroup,
+		order = "g[processing-unit]-h",
 		ingredients = {
 			{"electronic-circuit",2},
 			{"advanced-circuit",2},
