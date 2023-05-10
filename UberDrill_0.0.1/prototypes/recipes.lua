@@ -5,6 +5,7 @@ if mods["space-exploration"] then
 			name = "se-drill-nauvis",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -14,7 +15,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-omni", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -22,6 +23,7 @@ if mods["space-exploration"] then
 			name = "se-drill-crude-oil",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -31,7 +33,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-crude-oil", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -39,6 +41,7 @@ if mods["space-exploration"] then
 			name = "se-drill-stone",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -48,7 +51,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-stone", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -56,6 +59,7 @@ if mods["space-exploration"] then
 			name = "se-drill-iron-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -65,7 +69,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-iron-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -73,6 +77,7 @@ if mods["space-exploration"] then
 			name = "se-drill-copper-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -82,7 +87,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-copper-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -90,6 +95,7 @@ if mods["space-exploration"] then
 			name = "se-drill-uranium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -99,7 +105,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-uranium-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -107,6 +113,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-vulcanite",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -116,7 +123,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-vulcanite", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -124,6 +131,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-cryonite",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -133,7 +141,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-cryonite", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -141,6 +149,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-beryllium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -150,7 +159,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-beryllium-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -158,6 +167,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-holmium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -167,7 +177,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-holmium-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -175,6 +185,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-iridium-ore",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -184,7 +195,7 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-iridium-ore", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
 		{
@@ -192,6 +203,7 @@ if mods["space-exploration"] then
 			name = "se-drill-se-vitamelange",
 			icon = "__UberDrill__/graphics/icons/antimony-ore.png",
 			icon_size = 64, icon_mipmaps = 4,
+			hide_from_player_crafting = true,
 			energy_required = 1,
 			category = "drill-crafting-category",
 			subgroup = "raw-material",
@@ -201,9 +213,28 @@ if mods["space-exploration"] then
 			},
 			results = {
 				{name = "se-core-fragment-se-vitamelange", amount = 50 },
-				{name="se-space-coolant-hot", amount=10, type="fluid"}
+				{name="utilized-drill-coolant", amount=10, type="fluid"}
 			}
 		},
+		-- fluids
+		{
+			type = "recipe",
+			name = "se-utilized-drill-coolant-to-se-coolant-hot",
+			icon = "__UberDrill__/graphics/icons/utilized-drill-coolant-to-se-coolant-hot.png",
+			icon_size = 64, icon_mipmaps = 4,
+  			category = "space-radiator",
+			subgroup = "thermofluid",
+			energy_required = 10,
+			ingredients = {
+				{name="utilized-drill-coolant", amount = 500, type = "fluid"}
+			},
+			results = {
+				{name="se-space-coolant-hot", amount = 449, type = "fluid"} --the product cannot be seen for some f*cking reason
+			},
+			enabled = true,
+			always_show_made_in = true,
+			order = "a-c",
+		}
 	})
 end
 

@@ -1,3 +1,24 @@
+if mods["space-exploration"] then
+  data:extend({
+    {
+      type = "fluid",
+      name = "utilized-drill-coolant",
+      default_temperature = 200,
+      heat_capacity = "0.1KJ",
+      min_temperature = -273,
+      max_temperature = 5000,
+      base_color = {r=0.784, g=0.42, b=0},
+      flow_color = {r=0.784, g=0.42, b=0},
+      icon = "__UberDrill__/graphics/icons/utilized-drill-coolant.png",
+      icon_size = 64, icon_mipmaps = 1,
+      order = "t-a",
+      pressure_to_speed_ratio = 0.4,
+      flow_to_energy_ratio = 0.59,
+      subgroup = "space-fluids",
+    },
+  })
+end
+
 data:extend({
   {
     type = "fluid",

@@ -19,21 +19,5 @@ script.on_event(defines.events.on_built_entity, function(event)
         end
 
         entity.recipe_locked = true
-
-        --if planet_type == "barren" then
-        --    -- do something for barren planets
-        --elseif planet_type == "temperate" then
-        --    -- do something for temperate planets
-        --elseif planet_type == "desert" then
-        --    -- do something for desert planets
-        --elseif planet_type == "tropical" then
-        --    -- do something for tropical planets
-        --elseif planet_type == "swamp" then
-        --    -- do something for swamp planets
-        --elseif planet_type == "artic" then
-        --    -- do something for artic planets
-        --elseif planet_type == "volcanic" then
-        --    -- do something for volcanic planets
-        --end
     end
 end)

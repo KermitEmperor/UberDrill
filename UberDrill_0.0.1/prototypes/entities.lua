@@ -43,7 +43,7 @@ data:extend({
         pipe_picture = assembler2pipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
-        base_level = -1,
+        base_level = 10,
         pipe_connections = {{position = { -1, -7 }, type = "output"}},
         secondary_draw_orders = { north = -1 }
       }
