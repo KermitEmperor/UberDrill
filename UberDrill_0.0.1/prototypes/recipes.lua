@@ -264,6 +264,23 @@ local purpleCircuitIngredients = {
 	{"processing-unit",2}
 }
 
+
+local antimonyTrilforuideOrder = "g[fluoroantimonic-acid]"
+local antimonyTrilforuideGroup = "intermediate-products"
+local antimonyTrilforuideSubGroup = "raw-material"
+
+local fluorineStoneOrder = "intermediate-products"
+local fluorineStoneGroup = "fluid-recipes"
+local fluorineStoneSubGroup = "s[antimony-copper]-b"
+
+local fluoroantimonicOrder = "intermediate-products"
+local fluoroantimonicGroup = "fluid-recipes"
+local fluoroantimonicSubGroup = "g[fluoroantimonic-acid]"
+
+local hydrofluoricOrder = "intermediate-products"
+local hydrofluoricGroup = "fluid-recipes"
+local hydrofluoricSubGroup = "g[fluoroantimonic-acid]"
+
 local drillIngredients = {
 	{"purple-circuit",2},
 	{"concrete", 500},
@@ -273,6 +290,22 @@ local drillIngredients = {
 if mods["space-exploration"] then
 	purpleCircuitSubgroup = "processor"
 	table.insert(purpleCircuitIngredients, {"se-holmium-cable",10})
+
+	antimonyTrilforuideOrder = "g[sulfur]-b"
+	antimonyTrilforuideGroup = "resources"
+	antimonyTrilforuideSubGroup = "chemical"
+
+	fluorineStoneOrder = "a-ac"
+	fluorineStoneGroup = "resources"
+	fluorineStoneSubGroup = "chemical"
+
+	fluoroantimonicOrder = "e-a"
+	fluoroantimonicGroup = "resources"
+	fluoroantimonicSubGroup = "chemical"
+
+	hydrofluoricOrder = "e-b"
+	hydrofluoricGroup = "resources"
+	hydrofluoricSubGroup = "chemical"
 
 	drillIngredients = {
 		{"se-core-miner", 1},
@@ -322,12 +355,12 @@ data:extend({
 		energy_required = 12,
 		enabled = true,
 		category = "chemistry",
-		group = "intermediate-products",
-		subgroup = "fluid-recipes",
+		group = fluorineStoneGroup,
+		subgroup = fluorineStoneSubGroup,
+		order = fluorineStoneOrder,
 		ingredients = {{"stone", 10}},
 		icon = "__UberDrill__/graphics/icons/fluorine-stone.png",
 		icon_size = 64, icon_mipmaps = 4,
-		order = "s[antimony-copper]-b",
 		results = {
 			{type="fluid", name = "fluorine-gas", probability = 0.1, amount = 2},
 			{name = "stone",amount = 8}
@@ -389,9 +422,9 @@ data:extend({
 		energy_required = 15,
 		name = "fluoroantimonic-acid",
 		category = "chemistry",
-		group = "intermediate-products",
-		subgroup = "fluid-recipes",
-		order = "g[fluoroantimonic-acid]",
+		group = fluoroantimonicGroup,
+		subgroup = fluoroantimonicSubGroup,
+		order = fluoroantimonicOrder,
 		ingredients = {
 			{type="fluid", name="hydrofluoric-acid", amount = 30},
 			{name="antimony-trifluoride", amount = 3}
@@ -410,11 +443,11 @@ data:extend({
 		type = "recipe",
 		enabled = true,
 		energy_required = 15,
-		name = "antimony-trifluorid",
+		name = "antimony-trifluoride",
 		category = "chemistry",
-		group = "intermediate-products",
-		subgroup = "raw-material",
-		order = "g[fluoroantimonic-acid]",
+		group = antimonyTrilforuideGroup,
+		subgroup = antimonyTrilforuideSubGroup,
+		order = antimonyTrilforuideOrder,
 		ingredients = {
 			{type="fluid", name="fluorine-gas", amount = 30},
 			{name="antimony-ore", amount = 3}
@@ -435,9 +468,9 @@ data:extend({
 		energy_required = 15,
 		name = "hydrofluoric-acid",
 		category = "chemistry",
-		group = "intermediate-products",
-		subgroup = "fluid-recipes",
-		order = "g[fluoroantimonic-acid]",
+		group = hydrofluoricGroup,
+		subgroup = hydrofluoricSubGroup,
+		order = hydrofluoricOrder,
 		ingredients = {
 			{type="fluid", name="sulfuric-acid", amount = 30},
 			{type="fluid", name="fluorine-gas", amount = 30}
