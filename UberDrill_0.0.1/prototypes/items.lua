@@ -32,5 +32,13 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     group = "intermediate-products",
     stack_size = 50
+  },
+  {
+    type = "item",
+    name = "antimony-trifluoride",
+    icon="__UberDrill__/graphics/icons/antimony-trifluoride.png",
+    icon_size = 64, icon_mipmaps = 4,
+    group = "intermediate-products",
+    stack_size = 100
   }
 })

@@ -27,7 +27,11 @@ if mods["space-exploration"] then
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{position = { 0, -7 }, type = "input"}},
+      pipe_connections = {
+        {position = { 0, -7 }, type = "input"},
+        {position = { -2, -7 }, type = "input"},
+        {position = { -7, -2 }, type = "input"}
+      },
       secondary_draw_orders = { north = -1 }
     },
     {
@@ -36,7 +40,11 @@ if mods["space-exploration"] then
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{position = { 1, -7 }, type = "input"}},
+      pipe_connections = {
+        {position = { 2, -7 }, type = "input"},
+        {position = { -7, 0}, type = "input"},
+        {position = { -7, 2 }, type = "input"}
+      },
       secondary_draw_orders = { north = -1 }
     },
     {
@@ -45,7 +53,14 @@ if mods["space-exploration"] then
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = 10,
-      pipe_connections = {{position = { -1, -7 }, type = "output"}},
+      pipe_connections = {
+        {position = { -2, 7 }, type = "output"},
+        {position = { 0, 7 }, type = "output"},
+        {position = { 2, 7 }, type = "output"},
+        {position = { 7, -2 }, type = "output"},
+        {position = { 7, 0 }, type = "output"},
+        {position = { 7, 2 }, type = "output"}
+      },
       secondary_draw_orders = { north = -1 }
     }
   }

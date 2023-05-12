@@ -311,17 +311,33 @@ data:extend({
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "s[antimony-copper]",
-		results =
-		{{
-			name = "antimony-ore",
-			probability = 0.1,
-			amount = 2
-		  },
-		  {
-			name = "antimonyless-copper-ore",
-			probability = 0.9,
-			amount = 10
-		  }}
+		results = {
+			{name = "antimony-ore",probability = 0.1, amount = 2},
+			{name = "antimonyless-copper-ore",amount = 10}
+		}
+	},
+	{
+		type = "recipe",
+		name = "fluorine-stone",
+		energy_required = 12,
+		enabled = true,
+		category = "chemistry",
+		group = "intermediate-products",
+		subgroup = "fluid-recipes",
+		ingredients = {{"stone", 10}},
+		icon = "__UberDrill__/graphics/icons/fluorine-stone.png",
+		icon_size = 64, icon_mipmaps = 4,
+		order = "s[antimony-copper]-b",
+		results = {
+			{type="fluid", name = "fluorine-gas", probability = 0.1, amount = 2},
+			{name = "stone",amount = 8}
+		},
+		crafting_machine_tint = {
+			primary = {r = 1, g = 1, b = 0, a = 1.000}, -- #fff400ff
+			secondary = {r = 1, g = 0.9, b = 0, a = 1.000}, -- #ffd92bff
+			tertiary = {r = 1, g = 0.8, b = 0, a = 1.000}, -- #dfdd98ff
+			quaternary = {r = 1, g = 1.000, b = 0, a = 1.000}, -- #f7ff04ff
+		  }
 	},
 	{
 		type = "recipe",
@@ -365,5 +381,75 @@ data:extend({
 		order = "b[electric-mining-drill]",
 		ingredients = drillIngredients,
 		result = "drill"
+	},
+	--acid
+	{
+		type = "recipe",
+		enabled = true,
+		energy_required = 15,
+		name = "fluoroantimonic-acid",
+		category = "chemistry",
+		group = "intermediate-products",
+		subgroup = "fluid-recipes",
+		order = "g[fluoroantimonic-acid]",
+		ingredients = {
+			{type="fluid", name="hydrofluoric-acid", amount = 30},
+			{name="antimony-trifluoride", amount = 3}
+		},
+		results = {
+			{type="fluid", name="fluoroantimonic-acid", amount=10}
+		},
+		crafting_machine_tint = {
+    	  primary = {r = 1.000, g = 1, b = 1, a = 1.000}, -- #fff400ff
+    	  secondary = {r = 1.000, g = 0.9, b = 0.9, a = 1.000}, -- #ffd92bff
+    	  tertiary = {r = 0.8, g = 0.8, b = 0.8, a = 1.000}, -- #dfdd98ff
+    	  quaternary = {r = 0.8, g = 1.000, b = 1.000, a = 1.000}, -- #f7ff04ff
+    	}
+	},
+	{
+		type = "recipe",
+		enabled = true,
+		energy_required = 15,
+		name = "antimony-trifluorid",
+		category = "chemistry",
+		group = "intermediate-products",
+		subgroup = "raw-material",
+		order = "g[fluoroantimonic-acid]",
+		ingredients = {
+			{type="fluid", name="fluorine-gas", amount = 30},
+			{name="antimony-ore", amount = 3}
+		},
+		results = {
+			{name="antimony-trifluoride", amount=2	}
+		},
+		crafting_machine_tint = {
+    	  primary = {r = 1.000, g = 1, b = 1, a = 1.000}, -- #fff400ff
+    	  secondary = {r = 1.000, g = 0.9, b = 0.9, a = 1.000}, -- #ffd92bff
+    	  tertiary = {r = 0.8, g = 0.8, b = 0.8, a = 1.000}, -- #dfdd98ff
+    	  quaternary = {r = 0.8, g = 1.000, b = 1.000, a = 1.000}, -- #f7ff04ff
+    	}
+	},
+	{
+		type = "recipe",
+		enabled = true,
+		energy_required = 15,
+		name = "hydrofluoric-acid",
+		category = "chemistry",
+		group = "intermediate-products",
+		subgroup = "fluid-recipes",
+		order = "g[fluoroantimonic-acid]",
+		ingredients = {
+			{type="fluid", name="sulfuric-acid", amount = 30},
+			{type="fluid", name="fluorine-gas", amount = 30}
+		},
+		results = {
+			{type="fluid", name="hydrofluoric-acid", amount=50}
+		},
+		crafting_machine_tint = {
+			primary = {r = 1.000, g = 1, b = 0.5, a = 1.000}, -- #fff400ff
+			secondary = {r = 1.000, g = 0.9, b = 0.5, a = 1.000}, -- #ffd92bff
+			tertiary = {r = 1, g = 0.8, b = 0.5, a = 1.000}, -- #dfdd98ff
+			quaternary = {r = 1, g = 1.000, b = 0.5, a = 1.000}, -- #f7ff04ff
+		}
 	},
 })
