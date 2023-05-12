@@ -235,14 +235,55 @@ if mods["space-exploration"] then
 			enabled = true,
 			always_show_made_in = true,
 			order = "a-c",
-		}
+		},
+		{
+    		type = "recipe",
+    		name = "se-quantum-processor",
+    		result = "se-quantum-processor",
+    		result_count = 1,
+    		energy_required = 16,
+    		ingredients = {
+    		  { "purple-circuit", 4 },
+    		  { "se-holmium-cable", 32 },
+    		  { "se-holmium-plate", 32 },
+    		  { "se-quantum-phenomenon-data", 1},
+    		},
+    		category = "space-electromagnetics",
+    		requester_paste_multiplier = 1,
+    		always_show_made_in = true,
+    		enabled = false,
+  		},
 	})
 end
 
 local purpleCircuitSubgroup = "intermediate-product"
+local purpleCircuitIngredients = {
+	{name="lubricant",amount=25,type="fluid"},
+	{"electronic-circuit",2},
+	{"advanced-circuit",2},
+	{"processing-unit",2}
+}
+
+local drillIngredients = {
+	{"purple-circuit",2},
+	{"concrete", 500},
+	{"steel-plate", 1000}
+}
 
 if mods["space-exploration"] then
 	purpleCircuitSubgroup = "processor"
+	table.insert(purpleCircuitIngredients, {"se-holmium-cable",10})
+
+	drillIngredients = {
+		{"se-core-miner", 1},
+		{"se-quantum-processor", 10},
+		{"steel-plate", 1000},
+		{"se-heat-shielding", 200},
+		{"se-beryllium-plate", 300},
+		{"se-aeroframe-scaffold", 100},
+		{"se-holmium-solenoid", 300},
+		{"concrete", 500}
+	}
 end
 
 
@@ -251,17 +292,12 @@ data:extend({
 		type = "recipe",
 		enabled = true,
 		energy_required = 15,
-		name = "purple-circuit",
+		name = "purple-circuit-recipe",
 		category = "crafting-with-fluid",
 		group = "intermediate-products",
 		subgroup = purpleCircuitSubgroup,
-		order = "g[processing-unit]-h",
-		ingredients = {
-			{"electronic-circuit",2},
-			{"advanced-circuit",2},
-			{"processing-unit",2},
-			{name="lubricant",amount=25,type="fluid"}
-		},
+		order = "g[purple-circuit]",
+		ingredients = purpleCircuitIngredients,
 		result = "purple-circuit"
 	},
 	{
@@ -274,18 +310,28 @@ data:extend({
 		icon = "__UberDrill__/graphics/icons/antimony-copper.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "raw-material",
-		order = "s[antimony-copper]", -- k ordering so it shows up after explosives which is j ordering
+		order = "s[antimony-copper]",
 		results =
 		{{
 			name = "antimony-ore",
-			probability = 0.100,
+			probability = 0.1,
 			amount = 2
 		  },
 		  {
-			name = "copper-ore",
-			probability = 0.900,
+			name = "antimonyless-copper-ore",
+			probability = 0.9,
 			amount = 10
 		  }}
+	},
+	{
+		type = "recipe",
+		name = "antimonyless-copper-plate",
+		order = "c[copper-plate]-b",
+		enabled = true,
+		category = "smelting",
+		energy_required = 3.2,
+		ingredients = {{ "antimonyless-copper-ore", 1}},
+		result = "copper-plate"
 	},
 	{
 		type = "recipe",
@@ -300,21 +346,24 @@ data:extend({
 			{name="fluoroantimonic-acid",amount=25,type="fluid"}
 		},
 		results = {
-			{name = "antimony-ore", amount = 2 }
+			{name = "iron-ore", amount = 8 },
+			{name = "copper-ore", amount = 8 },
+			{name = "coal", amount = 4 },
+			{name = "stone", amount = 8 },
+			{name = "uranium-ore", amount = 8, probability = 0.08},
+			{type = "fluid",name = "crude-oil", amount = 16}
 		}
 	},
 	{
 		type = "recipe",
 		enabled = true,
 		energy_required = 15,
-		name = "purple-circuit",
+		name = "drill-crafting-recipe",
 		category = "crafting",
 		group = "production",
 		subgroup = "extraction-machine",
 		order = "b[electric-mining-drill]",
-		ingredients = {
-			{"purple-circuit",2},
-		},
+		ingredients = drillIngredients,
 		result = "drill"
 	},
 })

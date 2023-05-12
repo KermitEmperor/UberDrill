@@ -1,3 +1,59 @@
+local drill_fluid_boxes = {
+  {
+    production_type = "input",
+    pipe_picture = assembler2pipepictures(),
+    pipe_covers = pipecoverspictures(),
+    base_area = 10,
+    base_level = -1,
+    pipe_connections = {{position = { 1, -7 }, type = "input"}},
+    secondary_draw_orders = { north = -1 }
+  },
+  {
+    production_type = "output",
+    pipe_picture = assembler2pipepictures(),
+    pipe_covers = pipecoverspictures(),
+    base_area = 10,
+    base_level = 10,
+    pipe_connections = {{position = { -1, -7 }, type = "output"}},
+    secondary_draw_orders = { north = -1 }
+  }
+}
+
+if mods["space-exploration"] then
+  drill_fluid_boxes = {
+    {
+      production_type = "input",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{position = { 0, -7 }, type = "input"}},
+      secondary_draw_orders = { north = -1 }
+    },
+    {
+      production_type = "input",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = -1,
+      pipe_connections = {{position = { 1, -7 }, type = "input"}},
+      secondary_draw_orders = { north = -1 }
+    },
+    {
+      production_type = "output",
+      pipe_picture = assembler2pipepictures(),
+      pipe_covers = pipecoverspictures(),
+      base_area = 10,
+      base_level = 10,
+      pipe_connections = {{position = { -1, -7 }, type = "output"}},
+      secondary_draw_orders = { north = -1 }
+    }
+  }
+end
+
+
+
+
 data:extend({
   {
     type = "assembling-machine",
@@ -8,7 +64,7 @@ data:extend({
     minable = {mining_time = 0.5, result = "drill"},
     max_health = 150,
     corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
+    dying_explosion = "nuke-explosion",
     resistances = {
       {
         type = "fire",
@@ -19,35 +75,7 @@ data:extend({
     {
       module_slots = 5,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{position = { 0, -7 }, type = "input"}},
-        secondary_draw_orders = { north = -1 }
-      },
-      {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{position = { 1, -7 }, type = "input"}},
-        secondary_draw_orders = { north = -1 }
-      },
-      {
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 10,
-        pipe_connections = {{position = { -1, -7 }, type = "output"}},
-        secondary_draw_orders = { north = -1 }
-      }
-    },
+    fluid_boxes = drill_fluid_boxes,
     animation = {
       layers = {
         {
