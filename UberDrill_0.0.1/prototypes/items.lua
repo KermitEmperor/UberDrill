@@ -24,5 +24,13 @@ data:extend({
     group = "intermediate-products",
     place_result = "drill",
     stack_size = 5
+  },
+  {
+    type = "item",
+    name = "antimonyless-copper-ore",
+    icon = "__UberDrill__/graphics/icons/copper-ore.png",
+    icon_size = 64, icon_mipmaps = 4,
+    group = "intermediate-products",
+    stack_size = 50
   }
 })
