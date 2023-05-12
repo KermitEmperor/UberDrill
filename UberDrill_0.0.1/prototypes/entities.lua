@@ -100,7 +100,7 @@ data:extend({
           height = 1105,
           frame_count = 1,
           line_length = 1,
-          scale = 0.35,
+          scale = 0.37,
           hr_version = {
             filename = "__UberDrill__/graphics/icons/drill.png",
             priority = "high",
@@ -108,7 +108,7 @@ data:extend({
             height = 1105,
             frame_count = 1,
             line_length = 1,
-            scale = 0.35
+            scale = 0.37
           }
         }
       }
