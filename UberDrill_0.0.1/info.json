@@ -1,9 +1,9 @@
 {
     "name": "UberDrill",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Über Drill (Space Exploration compatible)",
     "author": "iHouqLF, EmperorKermit",
     "factorio_version": "1.1",
     "dependencies": ["base >= 1.1", "? space-exploration >= 0.6.104"],
-    "description": "This mod adds cool mining drill (big fricking drill)"
+    "description": "This mod adds a mining drill that can be placed anywhere for infinite resources, however it needs a very strong acid to mine this deep and it will require coolant if Space Exploration is present"
   }
