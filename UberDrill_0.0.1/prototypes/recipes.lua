@@ -232,7 +232,7 @@ if mods["space-exploration"] then
 				{name="se-space-coolant-hot", amount = 449, type = "fluid"} --the product cannot be seen for some f*cking reason
 			},
 			always_show_products = true,
-			enabled = true,
+			enabled = false,
 			always_show_made_in = true,
 			order = "a-c",
 		},
@@ -313,7 +313,6 @@ if mods["space-exploration"] then
 		{"steel-plate", 1000},
 		{"se-heat-shielding", 200},
 		{"se-beryllium-plate", 300},
-		{"se-aeroframe-scaffold", 100},
 		{"se-holmium-solenoid", 300},
 		{"concrete", 500}
 	}
