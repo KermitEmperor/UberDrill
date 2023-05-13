@@ -269,20 +269,20 @@ local antimonyTrilforuideOrder = "g[fluoroantimonic-acid]"
 local antimonyTrilforuideGroup = "intermediate-products"
 local antimonyTrilforuideSubGroup = "raw-material"
 
-local fluorineStoneOrder = "intermediate-products"
-local fluorineStoneGroup = "fluid-recipes"
-local fluorineStoneSubGroup = "s[antimony-copper]-b"
+local fluorineStoneOrder = "s[antimony-copper]-b"
+local fluorineStoneGroup = "intermediate-products"
+local fluorineStoneSubGroup = "fluid-recipes"
 
-local fluoroantimonicOrder = "intermediate-products"
-local fluoroantimonicGroup = "fluid-recipes"
-local fluoroantimonicSubGroup = "g[fluoroantimonic-acid]"
+local fluoroantimonicOrder = "g[fluoroantimonic-acid]"
+local fluoroantimonicGroup = "intermediate-products"
+local fluoroantimonicSubGroup = "fluid-recipes"
 
-local hydrofluoricOrder = "intermediate-products"
-local hydrofluoricGroup = "fluid-recipes"
-local hydrofluoricSubGroup = "g[fluoroantimonic-acid]"
+local hydrofluoricOrder = "g[fluoroantimonic-acid]"
+local hydrofluoricGroup = "intermediate-products"
+local hydrofluoricSubGroup = "fluid-recipes"
 
 local drillIngredients = {
-	{"purple-circuit",2},
+	{"purple-circuit",200},
 	{"concrete", 500},
 	{"steel-plate", 1000}
 }
@@ -323,7 +323,7 @@ end
 data:extend({
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 15,
 		name = "purple-circuit-recipe",
 		category = "crafting-with-fluid",
@@ -337,8 +337,9 @@ data:extend({
 		type = "recipe",
 		name = "antimony-copper",
 		energy_required = 12,
-		enabled = true,
+		enabled = false,
 		category = "centrifuging",
+		always_show_made_in = true,
 		ingredients = {{"copper-ore", 10}},
 		icon = "__UberDrill__/graphics/icons/antimony-copper.png",
 		icon_size = 64, icon_mipmaps = 4,
@@ -353,11 +354,12 @@ data:extend({
 		type = "recipe",
 		name = "fluorine-stone",
 		energy_required = 12,
-		enabled = true,
+		enabled = false,
 		category = "chemistry",
 		group = fluorineStoneGroup,
 		subgroup = fluorineStoneSubGroup,
 		order = fluorineStoneOrder,
+		always_show_made_in = true,
 		ingredients = {{"stone", 10}},
 		icon = "__UberDrill__/graphics/icons/fluorine-stone.png",
 		icon_size = 64, icon_mipmaps = 4,
@@ -405,7 +407,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 15,
 		name = "drill-crafting-recipe",
 		category = "crafting",
@@ -418,10 +420,11 @@ data:extend({
 	--acid
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 15,
 		name = "fluoroantimonic-acid",
 		category = "chemistry",
+		always_show_made_in = true,
 		group = fluoroantimonicGroup,
 		subgroup = fluoroantimonicSubGroup,
 		order = fluoroantimonicOrder,
@@ -441,10 +444,11 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 15,
 		name = "antimony-trifluoride",
 		category = "chemistry",
+		always_show_made_in = true,
 		group = antimonyTrilforuideGroup,
 		subgroup = antimonyTrilforuideSubGroup,
 		order = antimonyTrilforuideOrder,
@@ -464,10 +468,11 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 15,
 		name = "hydrofluoric-acid",
 		category = "chemistry",
+		always_show_made_in = true,
 		group = hydrofluoricGroup,
 		subgroup = hydrofluoricSubGroup,
 		order = hydrofluoricOrder,
