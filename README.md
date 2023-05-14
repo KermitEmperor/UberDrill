@@ -10,7 +10,7 @@ Major Features
 - It needs a very strong acid to mine in the depths of the planet
 - Full Space exploration support:
   - A coolant is needed for mining that is provided by Space Exploration 
-  - Drill recipe is changed to make it harder
+  - Drill recipe is changed to make it more immersive
 
 -----
 Check out our other mods!
