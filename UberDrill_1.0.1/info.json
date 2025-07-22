@@ -1,0 +1,9 @@
+{
+    "name": "UberDrill",
+    "version": "1.0.1",
+    "title": "Über Drill",
+    "author": "iHouqLF, EmperorKermit",
+    "factorio_version": "2.0",
+    "dependencies": ["base >= 1.1"],
+    "description": "This mod adds a mining drill that can be placed anywhere for infinite resources, however it needs a very strong acid to mine this deep and requires coolant with Space Age"
+  }
